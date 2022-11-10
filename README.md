@@ -1,2 +1,2 @@
-# Programming-Competetion
-# These are the solutions for A2SV community path questions
+# Competitive Programming
+# These are the solutions for leetcode questions including A2SV community path questions
