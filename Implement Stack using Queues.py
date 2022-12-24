@@ -7,10 +7,12 @@ class MyStack:
         self.queues.append(y)
 
     def pop(self) -> int:
-        return self.queues.pop(-1)
+        if len(self.queues) != 0:
+            return self.queues.pop(-1)
 
     def top(self) -> int:
-        return self.queues[-1]
+        if len(self.queues) != 0:
+            return self.queues[-1]
 
     def empty(self) -> bool:
         return len(self.queues) == 0
