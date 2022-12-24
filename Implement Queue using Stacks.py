@@ -7,10 +7,12 @@ class MyQueue:
         self.stack.append(y)
 
     def pop(self) -> int:
-        return self.stack.pop(0)
+        if len(self.stack) != 0:
+            return self.stack.pop(0)
 
     def peek(self) -> int:
-        return self.stack[0]
+        if len(self.stack) != 0:
+            return self.stack[0]
 
     def empty(self) -> bool:
         return len(self.stack) == 0
