@@ -7,10 +7,11 @@ class Solution:
                 dup.pop()
             else:
                 dup.append(s[-i])
+        
         n = len(dup)
         for i in range(n):
             ans += dup[-1]
             dup.pop()
         
         return ans
-            
+        
