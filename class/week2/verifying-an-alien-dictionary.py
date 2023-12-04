@@ -5,13 +5,13 @@ class Solution:
         for i in range(1,len(words)):
             a, b = words[i-1], words[i]
             for j in range(len(a)):
-                if j == len(b): 
+                if j == len(b):
                     return False
                 achar, bchar = a[j], b[j]
-                aix, bix = chars[achar], chars[bchar]
-                if aix < bix: 
+                aindx, bindx = chars[achar], chars[bchar]
+                if aindx < bindx:
                     break
-                if aix > bix: 
+                if aindx > bindx:
                     return False
         return True
                 
