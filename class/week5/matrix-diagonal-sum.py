@@ -3,9 +3,11 @@ class Solution:
         tot_sum = 0
         n = len(mat)
 
+        # primary diagonal sum
         for i in range(n):
             tot_sum += mat[i][i]
-        print(tot_sum)
+
+        # if n is even, there is no intersection
         if n % 2 == 0:
             for i in range(n):
                 tot_sum += mat[i][n - i - 1]
