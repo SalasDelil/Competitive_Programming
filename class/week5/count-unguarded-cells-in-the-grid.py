@@ -52,4 +52,6 @@ class Solution:
 
         result = self.guardChecker(grid, m, n, guards)
 
-        return m*n - result - len(guards) - len(walls)
+        unguarded = m*n - result - len(guards) - len(walls)
+
+        return unguarded
