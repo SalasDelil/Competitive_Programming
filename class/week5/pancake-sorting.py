@@ -1,6 +1,6 @@
 class Solution:
     def pancakeSort(self, arr: List[int]) -> List[int]:
-        ans = []
+        flips = []
         n = len(arr)
 
         for i in range(n):
@@ -12,8 +12,8 @@ class Solution:
                     max_ind = j
             
             k = max_ind+1
-            ans.append(k)
-            ans.append(n-i)
+            flips.append(k)
+            flips.append(n-i)
 
             subarr = arr[:k][::-1]
             arr = subarr + arr[k:]
@@ -21,4 +21,4 @@ class Solution:
             subarr  = arr[0:n-i][::-1]
             arr = subarr + arr[n-i:]
 
-        return ans
+        return flips
