@@ -8,16 +8,11 @@ class Solution:
         if not head:
             return head
         
-        previousNode, currentNode = head, head
-
+        previousNode, currentNode = None, head
         while currentNode:
-            if previousNode == currentNode:
-                currentNode = currentNode.next
-                previousNode.next = None
-            else:
-                nextNode = currentNode.next
-                currentNode.next = previousNode
-                previousNode = currentNode
-                currentNode = nextNode
+            nextNode = currentNode.next
+            currentNode.next = previousNode
+            previousNode = currentNode
+            currentNode = nextNode
 
         return previousNode
