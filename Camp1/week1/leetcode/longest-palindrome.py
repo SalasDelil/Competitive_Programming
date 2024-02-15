@@ -1,7 +1,6 @@
 class Solution:
     def longestPalindrome(self, s: str) -> int:
         counts = Counter(s)
-        print(counts)
         longestlen = 0
         firstOdd = False
 
