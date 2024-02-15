@@ -9,7 +9,6 @@ class Solution:
                 firstOdd = True
                 longestlen += val
             else:
-                temp = val % 2
-                longestlen += val - temp
-
+                longestlen += 2*(val//2)
+                
         return longestlen
