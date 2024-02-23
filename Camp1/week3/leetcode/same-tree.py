@@ -7,16 +7,10 @@
 class Solution:
     def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
         def isSame(p, q):
-            if not p and not q:
+            if not(p or q):
                 return True
 
-            if p and q:
-                if p.val == q.val:
-                    return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
-                else:
-                    return False
+            if p and q and (p.val == q.val):
+                    return isSame(p.left, q.left) and isSame(p.right, q.right)
 
-            else:
-                return False
-            
         return isSame(p, q)
