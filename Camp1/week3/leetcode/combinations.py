@@ -1,19 +1,17 @@
 class Solution:
     def combine(self, n: int, k: int) -> List[List[int]]:
-        self.ans = []
-        self.path = []
+        ans = []
+        path = []
 
         def combinations(m):
-            if len(self.path) == k:
-                self.ans.append(self.path.copy())
+            if len(path) == k:
+                ans.append(path.copy())
                 return
             
             for i in range(m+1, n+1):
-                self.path.append(i)
-                
+                path.append(i)
                 combinations(i)
-
-                self.path.pop()
+                path.pop()
 
         combinations(0)
-        return self.ans
+        return ans
